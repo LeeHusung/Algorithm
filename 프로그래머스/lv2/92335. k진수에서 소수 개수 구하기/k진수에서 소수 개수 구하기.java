@@ -16,13 +16,15 @@ class Solution {
                 if (!sosu.isEmpty()) {
                 int sosuCount = 0;
                 long a = Long.parseLong(sosu);
-                long sqrtA = (long) Math.sqrt(a); // a의 제곱근 계산
-                    
+                long sqrtA = (long) Math.sqrt(a); // a의 제곱근 계산 
+                    //기존에 제곱근 안쓰고했다가 1, 11번 시간초과나옴.
+                    //제곱근 ex 1 7 49 면 7까지만 반복하고. 당연히49는 j가 1일때만 소수고 제곱근이 아니여도 소수.
+                    //소수찾기
                     for (int j = 1; j <= sqrtA; j++) {
                         if (a % j == 0) {
                             sosuCount++;
                             if (j * j != a) {
-                                sosuCount++; // 제곱근 이외의 약수도 존재
+                                sosuCount++; // 제곱근이 아니면 ++
                             }
                         }
                     }
