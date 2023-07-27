@@ -23,7 +23,7 @@ class Solution {
                     for (int j = 1; j <= sqrtA; j++) {
                         if (a % j == 0) {
                             sosuCount++;
-                            if (j * j != a) {
+                            if (j * j != a) { //a가 1이고 sqrt도 1이면 여기서 걸림.
                                 sosuCount++; // 제곱근이 아니면 ++
                             }
                         }
