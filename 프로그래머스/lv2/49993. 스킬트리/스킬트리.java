@@ -10,12 +10,12 @@ class Solution {
                 if (skill.contains(str)) {
                     sb.append(str);
                 }
-            }
+            } //일치하는 skill들 sb에 모두 담기
             
             boolean flag = true;
             for (int i = 0; i<sb.length(); i++) {
-                if (skill.charAt(i) != sb.toString().charAt(i)) {
-                    flag = false;
+                if (skill.charAt(i) != sb.toString().charAt(i)) { //순서 다르면 모두 반복 종료
+                    flag = false; // flag는 갯수 세기 용도
                     break;
                 }
             }
@@ -52,11 +52,8 @@ class Solution {
 //             }
 //             if (!treesQ.isEmpty()){
 //                 answer++;
-//             }
-            
-//         }
-        
-        
+//             }   
+//         }   
 //         return answer;
 //     }
 // }
