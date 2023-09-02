@@ -1,13 +1,13 @@
 import java.util.*;
 class Solution {
-    private static String[] sarr;
     private static List<String> list;
+    private static String[] sarr;
     public int solution(String word) {
         int answer = 0;
         
-        sarr = new String[]{"A", "E", "I", "O", "U"};
         list = new ArrayList<>();
-
+        sarr = new String[]{"A", "E", "I", "O", "U"};
+        
         dfs(word, "", 0);
         
         for (int i = 0; i<list.size(); i++) {
@@ -18,15 +18,13 @@ class Solution {
         
         return answer;
     }
-
+    
     private void dfs(String word, String str, int depth) {
         list.add(str);
-        if (depth == 5) {
-            return;
-        }
+        if (depth == 5) return;
         
         for (int i = 0; i<sarr.length; i++) {
-            dfs(word, str + sarr[i], depth+1);
+            dfs(word, str + sarr[i], depth + 1);
         }
     }
 }
