@@ -8,7 +8,7 @@ class Solution {
         list = new ArrayList<>();
         sarr = new String[]{"A", "E", "I", "O", "U"};
         
-        dfs(word, "", 0);
+        dfs("", 0);
         
         for (int i = 0; i<list.size(); i++) {
             if (word.equals(list.get(i))) {
@@ -19,12 +19,12 @@ class Solution {
         return answer;
     }
     
-    private void dfs(String word, String str, int depth) {
+    private void dfs(String str, int depth) {
         list.add(str);
         if (depth == 5) return;
         
         for (int i = 0; i<sarr.length; i++) {
-            dfs(word, str + sarr[i], depth + 1);
+            dfs(str + sarr[i], depth + 1);
         }
     }
 }
