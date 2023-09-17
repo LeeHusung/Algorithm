@@ -38,11 +38,11 @@ class Solution {
       int count = 0;
       while (isTrue) {
           isTrue = false;
-      Set<Node> set = new HashSet<>();
+          Set<Node> set = new HashSet<>();
           
           for (int i = 0; i<ch.length-1; i++) {
               for (int j = 0; j<ch[i].length-1; j++) {
-                  if (ch[i][j] != ' ' && ch[i][j] == ch[i+1][j] && ch[i][j] == ch[i][j+1] && ch[i][j] == ch[i+1][j+1]) {
+                  if (ch[i][j] != ' ' && ch[i][j] == ch[i+1][j] && ch[i][j] == ch[i][j+1] && ch[i][j] == ch[i+1][j+1]) { //ch[i][j] != ' '이 코드가 없으면 ' '인 값들도 다 조건에 맞게되니까 set에 추가됨. ' '면 생략해야되기때문에 있어야됨.
                       set.add(new Node(i, j));
                       set.add(new Node(i+1, j));
                       set.add(new Node(i, j+1));
