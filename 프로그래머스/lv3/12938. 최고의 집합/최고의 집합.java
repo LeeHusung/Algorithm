@@ -10,11 +10,7 @@ class Solution {
             }
             else {
                 answer[i] = s/n;
-                int x = s%n;
-                if (x>0) {
-                    s++;
-                }
-                x--;
+                s++;
             }
         }
             
