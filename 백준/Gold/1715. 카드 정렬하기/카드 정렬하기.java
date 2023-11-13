@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Scanner;
@@ -12,18 +11,6 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             pq.offer(sc.nextInt());
-        }
-        if (n == 1) {
-            System.out.println(0);
-            return;
-        }
-        if (n == 2) {
-            int sum = 0;
-            while (!pq.isEmpty()) {
-                sum += pq.poll();
-            }
-            System.out.println(sum);
-            return;
         }
 
         int answer = 0;
