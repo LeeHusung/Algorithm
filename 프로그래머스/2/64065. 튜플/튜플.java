@@ -12,16 +12,7 @@ class Solution {
         
         String[] split = sb.toString().split("},\\{");
 
-        Arrays.sort(split, (a, b) -> Integer.compare(a.length(), b.length()));
-        
-        // Set<Integer> set = new HashSet<>();
-        // for(int i = 0; i<split.length; i++) {
-        //     String[] k = split[i].split(",");
-        //     for (int j = 0; j < k.length; j++) {
-        //         int parse = Integer.parseInt(k[j]);
-        //         set.add(parse);
-        //     }
-        // }
+        Arrays.sort(split, (a, b) -> a.length() - b.length());
       
         int[] answer = new int[split.length];
         List<Integer> list = new ArrayList<>();
