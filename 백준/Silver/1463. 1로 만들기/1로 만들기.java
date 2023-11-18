@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
@@ -7,46 +5,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         x = sc.nextInt();
+        int[] dp = new int[x + 1];
+        dp[1] = 0;
+        if (x > 1) dp[2] = 1;
+        if (x > 2) dp[3] = 1;
 
-        if (x == 1) {
-            System.out.println(0);
-            return;
-        }
-        int cnt = bfs();
-
-        System.out.println(cnt + 1);
-    }
-
-    private static int bfs() {
-        Queue<Integer> q = new LinkedList<>();
-        q.offer(1);
-        int[] ch = new int[x + 1];
-        ch[1] = 1;
-
-        int cnt = 0;
-        while (!q.isEmpty()) {
-            int len = q.size();
-            for (int i = 0; i < len; i++) {
-                int p = q.poll();
-                int nx = p * 3;
-                int ny = p * 2;
-                int nz = p + 1;
-                if (nx == x || ny == x || nz == x) return cnt;
-                if (nx < x && ch[nx] == 0) {
-                    ch[nx] = 1;
-                    q.offer(nx);
-                }
-                if (ny < x && ch[ny] == 0) {
-                    ch[ny] = 1;
-                    q.offer(ny);
-                }
-                if (nz < x && ch[nz] == 0) {
-                    ch[nz] = 1;
-                    q.offer(nz);
-                }
+        for (int i = 4; i <= x; i++) {
+            dp[i] = dp[i - 1] + 1;
+            if (i % 3 == 0) {
+                dp[i] = Math.min(dp[i / 3] + 1, dp[i]);
+            }if (i % 2 == 0) {
+                dp[i] = Math.min(dp[i / 2] + 1, dp[i]);
             }
-            cnt++;
         }
-        return cnt;
+        System.out.println(dp[x]);
     }
 }
