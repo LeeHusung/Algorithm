@@ -69,14 +69,14 @@ public class Main {
         int[][] ch = new int[n][n];
         q.offer(new int[]{startRow, startCol, 0});
         ch[startRow][startCol] = 1;
-
-        // 시작점에 손님이 있는지 확인
-        for (int i = 0; i < passengers.size(); i++) {
-            int[] passenger = passengers.get(i);
-            if (passenger[0] == startRow && passenger[1] == startCol) {
-                pq.offer(new int[]{i, passenger[0], passenger[1], 0});
-            }
-        }
+//
+//        // 시작점에 손님이 있는지 확인
+//        for (int i = 0; i < passengers.size(); i++) {
+//            int[] passenger = passengers.get(i);
+//            if (passenger[0] == startRow && passenger[1] == startCol) {
+//                pq.offer(new int[]{i, passenger[0], passenger[1], 0});
+//            }
+//        }
         while (!q.isEmpty()) {
             int[] p = q.poll();
             if (fuel < p[2]) { //최단거리 손님 찾으러 가는데 연료가 부족한 경우
