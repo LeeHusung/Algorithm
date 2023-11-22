@@ -13,49 +13,41 @@ public class Main {
 
         for (int i = 1; i <= 4; i++) {
             String s = sc.next();
-            for (int k = 0; k < s.length(); k++) {
-                graph.get(i).addLast(s.charAt(k) - '0');
+            for (int j = 0; j < s.length(); j++) {
+                graph.get(i).add(s.charAt(j) - '0');
             }
         }
 
         int k = sc.nextInt();
         for (int i = 0; i < k; i++) {
-            int tobniNum = sc.nextInt();
+            int tobni = sc.nextInt();
             int direction = sc.nextInt();
-            LinkedList<Integer> list = graph.get(tobniNum);
-            int[] change = new int[4 + 1];
-            change[tobniNum] = direction;
-            int x = tobniNum;
-            while (x < 4) {
-                LinkedList<Integer> list1 = graph.get(x + 1);
-                if (list1.get(6) != list.get(2)) {
-                    change[x + 1] = -change[x];
+            int[] change = new int[5];
+            change[tobni] = direction;
+
+            for (int j = tobni; j < 4; j++) {
+                if (graph.get(j).get(2) != graph.get(j + 1).get(6)) {
+                    change[j + 1] = -change[j];
                 }
-                x++;
-                list = list1;
             }
-            list = graph.get(tobniNum);
-            int y = tobniNum;
-            while (y > 1) {
-                LinkedList<Integer> list1 = graph.get(y - 1);
-                if (list1.get(2) != list.get(6)) {
-                    change[y - 1] = -change[y];
+            for (int j = tobni; j > 1; j--) {
+                if (graph.get(j).get(6) != graph.get(j - 1).get(2)) {
+                    change[j - 1] = -change[j];
                 }
-                y--;
-                list = list1;
             }
 
             for (int j = 1; j <= 4; j++) {
-                LinkedList<Integer> listsss = graph.get(j);
+                LinkedList<Integer> list = graph.get(j);
                 if (change[j] == 1) {
-                    listsss.addFirst(listsss.pollLast());
-                }
-                if (change[j] == -1) {
-                    listsss.addLast(listsss.pollFirst());
+                    list.addFirst(list.pollLast());
+                } else if (change[j] == -1) {
+                    list.addLast(list.pollFirst());
                 }
             }
-
         }
+
+
+
 
         int sum = 0;
         if (graph.get(1).get(0) == 1) sum += 1;
