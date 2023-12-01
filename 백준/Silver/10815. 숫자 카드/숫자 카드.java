@@ -17,20 +17,18 @@ public class Main {
             set.add(Integer.parseInt(s[i]));
         }
 
-        List<Integer> list = new LinkedList<>();
+        StringBuilder sb = new StringBuilder();
+
 
         int m = Integer.parseInt(br.readLine());
         String[] s2 = br.readLine().split(" ");
         for (int i = 0; i < s2.length; i++) {
             int x = Integer.parseInt(s2[i]);
-            if (set.contains(x)) list.add(1);
-            else list.add(0);
+            if (set.contains(x)) sb.append(1).append(" ");
+            else sb.append(0).append(" ");
         }
 
-        for (int x : list) {
-            System.out.print(x + " ");
-        }
-
+        System.out.println(sb);
 
     }
 }
