@@ -25,6 +25,7 @@ public class Main {
             }
         }
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < m; i++) {
             String[] s1 = br.readLine().split(" ");
             int x1 = Integer.parseInt(s1[0]);
@@ -32,7 +33,8 @@ public class Main {
             int x2 = Integer.parseInt(s1[2]);
             int y2 = Integer.parseInt(s1[3]);
 
-            System.out.println((dp[x2][y2] - dp[x2][y1 - 1] - dp[x1-1][y2] + dp[x1-1][y1-1]));
+            sb.append(dp[x2][y2] - dp[x2][y1 - 1] - dp[x1-1][y2] + dp[x1-1][y1-1]).append("\n");
         }
+        System.out.println(sb);
     }
 }
