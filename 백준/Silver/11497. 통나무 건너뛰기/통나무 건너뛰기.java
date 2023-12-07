@@ -18,15 +18,16 @@ public class Main {
             for (int j = 0; j < n; j++) {
                 arr[j] = Integer.parseInt(s[j]);
             }
-            LinkedList<Integer> list = new LinkedList<>();
+            int[] answer = new int[n];
             Arrays.sort(arr, (a, b) -> b - a);
+            int idx = 0;
             for (int j = 0; j < arr.length; j++) {
-                if (j % 2 == 0) list.addLast(arr[j]);
-                else list.addFirst(arr[j]);
+                if (j % 2 == 0) answer[idx++] = arr[j];
+                else answer[n - idx] = arr[j];
             }
             int min = 0;
-            for (int j = 0; j < list.size() - 1; j++) {
-                min = Math.max(min, Math.abs(list.get(j + 1) - list.get(j)));
+            for (int j = 0; j < answer.length - 1; j++) {
+                min = Math.max(min, Math.abs(answer[j + 1] - answer[j]));
             }
             sb.append(min).append("\n");
         }
