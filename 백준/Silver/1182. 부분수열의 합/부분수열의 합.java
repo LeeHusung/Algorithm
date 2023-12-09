@@ -1,24 +1,18 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 
 public class Main {
     static int n, s, answer;
     static int[] arr;
-    static LinkedList<Integer> list = new LinkedList<>();
 
-    public static void D(int start) {
-        int sum = 0;
-        for (int x : list) {
-            sum += x;
+    public static void D(int idx, int length, int sum) {
+        if (idx == n) {
+            if (length > 0 && sum == s) answer++;
+            return;
         }
-        if (!list.isEmpty() && sum == s) answer++;
-        for (int i = start; i < arr.length; i++) {
-                list.add(arr[i]);
-                D(i + 1);
-                list.pollLast();
-        }
+        D(idx + 1, length + 1, sum + arr[idx]);
+        D(idx + 1, length, sum);
     }
 
     public static void main(String[] args) throws IOException {
@@ -32,7 +26,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(s1[i]);
         }
-        D(0);
+        D(0, 0, 0);
         System.out.println(answer);
     }
 }
