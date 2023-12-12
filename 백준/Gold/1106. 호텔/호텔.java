@@ -10,7 +10,6 @@ public class Main {
         String[] s = br.readLine().split(" ");
         int C = Integer.parseInt(s[0]);
         int N = Integer.parseInt(s[1]);
-        int answer = 0;
 
         int[] dp = new int[C + 101];
         Arrays.fill(dp, Integer.MAX_VALUE);
@@ -26,8 +25,7 @@ public class Main {
                 }
             }
         }
-
-        answer = dp[C];
+        int answer = dp[C];
         for (int i = C; i < dp.length; i++) {
             answer = Math.min(answer, dp[i]);
         }
