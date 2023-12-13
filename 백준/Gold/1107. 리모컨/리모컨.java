@@ -11,17 +11,16 @@ public class Main {
     static LinkedList<Integer> list = new LinkedList<>();
 
     public static void D(int L) {
-
         if (list.size() >= 1) {
-            String z = "";
+            String str = "";
             for (int x : list) {
-                z += x;
+                str += x;
             }
-            int num = Integer.parseInt(z);
-            int k = Math.abs(n - num);
-            int kkk = k + L;
-            answer = Math.min(answer, kkk);
-        }if (L < len + 1) {
+            int parse = Integer.parseInt(str);
+            int distance = Math.abs(n - parse);
+            answer = Math.min(answer, L + distance);
+        }
+        if (L < len + 1) {
             for (int i = 0; i < nums.length; i++) {
                 list.add(nums[i]);
                 D(L + 1);
@@ -29,7 +28,6 @@ public class Main {
             }
         }
     }
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
