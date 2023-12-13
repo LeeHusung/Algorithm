@@ -1,55 +1,61 @@
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        String[] arr = new String[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.next();
-        }
-
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String[] sarr = new String[n];
         Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            int len = arr[i].length() - 1;
-            for (int j = 0; j < arr[i].length(); j++) {
-                int sum = 1;
-                for (int k = 0; k < len; k++) {
-                    sum *= 10;
-                }
-                len--;
-                map.put(arr[i].charAt(j), map.getOrDefault(arr[i].charAt(j), 0) + sum);
+        for (int i = 0; i < n; i++) {
+            String s = br.readLine();
+            sarr[i] = s;
+            int zungyodo = 1;
+            for (int j = s.length() - 1; j >= 0; j--) {
+                map.put(s.charAt(j), map.getOrDefault(s.charAt(j), 0) + zungyodo);
+                zungyodo *= 10;
             }
         }
 
-        ArrayList<Character> list = new ArrayList<>(map.keySet());
+        List<Character> list = new ArrayList<>(map.keySet());
+        Collections.sort(list, (a, b) -> map.get(b) - map.get(a));
 
-        Collections.sort(list, (a, b) -> map.get(b).compareTo(map.get(a)));
-
-        Map<Character, String> resMap = new HashMap<>();
-        String[] str = {"9", "8", "7", "6", "5", "4", "3", "2", "1", "0"};
-        int idx = 0;
+        int num = 9;
         for (char ch : list) {
-            resMap.put(ch, str[idx++]);
-        }
-        List<String> res = new ArrayList<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            String aaa = "";
-            for (int j = 0; j < arr[i].length(); j++) {
-                String k = resMap.get(arr[i].charAt(j));
-                aaa = aaa + k;
-            }
-            res.add(aaa);
+            map.put(ch, num--);
         }
 
+        // 40퍼? 정도에서 틀림
+        //아마 중요도가 같은 알파벳에 문자가 바뀌여서 들어가서 ??
+//        List<Integer> list = new LinkedList<>();
+//        for (char ch : map.keySet()) {
+//            list.add(map.get(ch));
+//        }
+//        Collections.sort(list, (a, b) -> b - a);
+//
+//        int[] nums = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+//        int idx = 0;
+//        for (int x : list) {
+//            for (char ch : map.keySet()) {
+//                if (x == map.get(ch)) {
+//                    map.put(ch, nums[idx++]);
+//                    break;
+//                }
+//            }
+//        }
+//
         int answer = 0;
-        for (int i = 0; i < res.size(); i++) {
-            answer += Integer.parseInt(res.get(i));
+        for (String x : sarr) {
+            String str = "";
+            for (int i = 0; i < x.length(); i++) {
+                str += map.get(x.charAt(i));
+            }
+            answer += Integer.parseInt(str);
         }
         System.out.println(answer);
+
     }
 }
