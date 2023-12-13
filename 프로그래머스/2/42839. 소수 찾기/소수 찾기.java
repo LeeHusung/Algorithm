@@ -1,44 +1,43 @@
 import java.util.*;
 class Solution {
-    static int answer;
+    static int n, answer;
     static int[] ch;
-    static int n;
-    Set<Integer> set = new HashSet<>();
-    public void D(String[] s, String str) {
-        if (!str.equals("")) {
-            int x = Integer.parseInt(str);
-            set.add(x);
+    static LinkedList<Character> list = new LinkedList<>();
+    static Set<Integer> set = new HashSet<>();
+    public int checkSosu(LinkedList<Character> list) {
+        String str = "";
+        for (char x : list) {
+            str += x;
         }
-            for (int i = 0; i < n; i++) {
-                if (ch[i] == 0) {
-                    ch[i] = 1;
-                    // str += s[i];
-                    D(s, str +s[i]);
-                    ch[i] = 0;
-                }
-            }
+        int c = Integer.parseInt(str);    
+        // System.out.println(c);
+        if (c == 0 || c == 1) return 0;
+        for (int j = 2; j <= Math.sqrt(c); j++) {
+            if (c % j == 0) return 0;
+        }
+        return c;
     }
     
-    public boolean isPrime(int n) {
-        if (n <= 1) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
+    public void D(int L, String numbers) {
+        for (int i = 0; i < n; i++) {
+            if (ch[i] == 0) {
+                ch[i] = 1;
+                list.add(numbers.charAt(i));
+                int c = checkSosu(list);
+                if (c != 0) set.add(c);
+                D(L + 1, numbers);
+                ch[i] = 0;
+                list.pollLast();
+            }
         }
-        return true;
     }
     public int solution(String numbers) {
         answer = 0;
         n = numbers.length();
         ch = new int[n];
+        D(0, numbers);
         
-        String[] s = numbers.split("");
-        String str = "";
-        D(s, str);
         
-        for (int x : set) {
-            if (isPrime(x)) answer++;
-        }
-        
-        return answer;
+        return set.size();
     }
 }
