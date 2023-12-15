@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -39,6 +38,9 @@ public class Main {
         answer = 0;
         res = new int[n * 2 + 1];
         ch = new int[n + 1];
+        res[x] = y - x - 1;
+        res[y] = y - x - 1;
+        ch[y - x - 1] = 1;
 
         D(1);
         System.out.println(answer);
