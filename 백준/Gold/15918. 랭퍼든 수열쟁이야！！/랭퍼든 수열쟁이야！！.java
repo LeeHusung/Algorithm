@@ -1,29 +1,30 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
     static int n, x, y, answer;
-    static int[] arr, res;
-    static boolean[] used;
+    static int[] res, ch;
 
     public static void D(int L) {
-        if (L > 2*n) {
+        if (L > 2 * n) {
             if (res[x] == res[y] && res[x] != 0) {
                 answer++;
             }
             return;
         }
-        if (res[L] != 0) {
-            D(L + 1);
-        } else {
+        if (res[L] != 0) D(L + 1);
+        else {
             for (int i = 1; i <= n; i++) {
-                if (!used[i] && L + i + 1 <= 2*n && res[L + i + 1] == 0) {
-                    used[i] = true;
-                    res[L] = res[L + i + 1] = i;
+                if (ch[i] == 0 && L + i + 1 < res.length && res[L + i + 1] == 0) {
+                    ch[i] = 1;
+                    res[L] = i;
+                    res[L + i + 1] = i;
                     D(L + 1);
-                    used[i] = false;
-                    res[L] = res[L + i + 1] = 0;
+                    ch[i] = 0;
+                    res[L] = 0;
+                    res[L + i + 1] = 0;
                 }
             }
         }
@@ -36,8 +37,9 @@ public class Main {
         x = Integer.parseInt(s[1]);
         y = Integer.parseInt(s[2]);
         answer = 0;
-        res = new int[2*n+1];
-        used = new boolean[n+1];
+        res = new int[n * 2 + 1];
+        ch = new int[n + 1];
+
         D(1);
         System.out.println(answer);
     }
