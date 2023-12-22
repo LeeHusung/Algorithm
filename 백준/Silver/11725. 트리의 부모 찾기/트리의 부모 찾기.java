@@ -39,9 +39,12 @@ public class Main {
                 }
             }
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 2; i < res.length; i++) {
-            System.out.println(res[i]);
+            sb.append(res[i]).append("\n");
+//            System.out.println(res[i]);
         }
+        System.out.println(sb);
 
     }
 }
