@@ -1,48 +1,47 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
 
-        int n = sc.nextInt();
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             graph.add(new ArrayList<>());
         }
 
         for (int i = 0; i < n - 1; i++) {
-            int x = sc.nextInt();
-            int y = sc.nextInt();
+            String[] s = br.readLine().split(" ");
+            int x = Integer.parseInt(s[0]);
+            int y = Integer.parseInt(s[1]);
             graph.get(x).add(y);
             graph.get(y).add(x);
         }
 
+        int[] ch = new int[n + 1];
+        int[] res = new int[n + 1];
         Queue<Integer> q = new LinkedList<>();
         q.offer(1);
-        int[] ch = new int[n + 1];
         ch[1] = 1;
-        Map<Integer, Integer> map = new HashMap<>();
-
         while (!q.isEmpty()) {
-            int p = q.poll();
+            Integer p = q.poll();
             for (int x : graph.get(p)) {
                 if (ch[x] == 0) {
                     ch[x] = 1;
-                    map.put(x, p);
+                    res[x] = p;
                     q.offer(x);
                 }
             }
         }
-        int[] arr = new int[n + 1];
-        for (int key : map.keySet()) {
-            arr[key] = map.get(key);
+        for (int i = 2; i < res.length; i++) {
+            System.out.println(res[i]);
         }
-
-        for (int i = 2; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-
 
     }
 }
