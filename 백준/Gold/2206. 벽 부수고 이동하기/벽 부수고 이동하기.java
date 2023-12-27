@@ -41,19 +41,19 @@ public class Main {
             L++;
             for (int i = 0; i < len; i++) {
                 int[] p = q.poll();
-//                if (p[2] > 1) continue;
-//                System.out.println("p[0] p[1] = " + p[0] + " " + p[1] + " ");
-                if (p[0] == n-1 && p[1] == m-1) return L;
+                if (p[0] == n - 1 && p[1] == m - 1) return L;
                 for (int j = 0; j < 4; j++) {
                     int nx = p[0] + dx[j];
                     int ny = p[1] + dy[j];
-                    if (nx >= 0 && ny >= 0 && nx < n && ny < m && p[2] == 0 && ch[nx][ny][p[2] + 1] == 0 && arr[nx][ny] == 1) {
-                        ch[nx][ny][p[2] + 1] = 1;
-                        q.offer(new int[]{nx, ny, p[2] + 1});
-                    }
-                    if (nx >= 0 && ny >= 0 && nx < n && ny < m && ch[nx][ny][p[2]] == 0 && arr[nx][ny] == 0) {
-                        ch[nx][ny][p[2]] = 1;
-                        q.offer(new int[]{nx, ny, p[2]});
+                    if (nx >= 0 && ny >= 0 && nx < n && ny < m) {
+                        if (arr[nx][ny] == 1 && p[2] == 0 && ch[nx][ny][p[2] + 1] == 0) {
+                            ch[nx][ny][p[2] + 1] = 1;
+                            q.offer(new int[]{nx, ny, p[2] + 1});
+                        }
+                        if (arr[nx][ny] == 0 && ch[nx][ny][p[2]] == 0) {
+                            ch[nx][ny][p[2]] = 1;
+                            q.offer(new int[]{nx, ny, p[2]});
+                        }
                     }
                 }
             }
