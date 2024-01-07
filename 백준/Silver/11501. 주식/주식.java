@@ -18,12 +18,12 @@ public class Main {
 
             long answer = 0;
 
-            long x = 0;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j] > x) {
-                    x = arr[j];
-                } else {
+            long x = arr[0];
+            for (int j = 1; j < arr.length; j++) {
+                if (arr[j] < x) {
                     answer += x - arr[j];
+                } else {
+                    x = arr[j];
                 }
             }
 
