@@ -1,45 +1,36 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class Main {
-    static class Node implements Comparable<Node> {
-        long x, y;
-
-        public Node(long x, long y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public int compareTo(Node o) {
-            if (this.y == o.y) return (int) (this.x - o.x); 
-            else return (int) (this.y - o.y);
-        }
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        ArrayList<Node> list = new ArrayList<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[][] arr = new int[n][2];
         for (int i = 0; i < n; i++) {
-            long x = sc.nextLong();
-            long y = sc.nextLong();
-            list.add(new Node(x, y));
+            String[] s = br.readLine().split(" ");
+            int start = Integer.parseInt(s[0]);
+            int end = Integer.parseInt(s[1]);
+            arr[i][0] = start;
+            arr[i][1] = end;
         }
-        Collections.sort(list);
+        Arrays.sort(arr, (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
 
-        long start = list.get(0).x;
-        long end = list.get(0).y;
-        int answer = 1;
-        for (int i = 1; i < list.size(); i++) {
-            if (list.get(i).x >= end) {
-                start = list.get(i).x;
-                end = list.get(i).y;
-                answer++;
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[0] == a[0] ? b[1] - a[1] : b[0] - a[0]);
+
+        for (int i = 0; i < arr.length; i++) {
+            if (!pq.isEmpty() && pq.peek()[1] > arr[i][1]) {
+                pq.poll();
+                pq.add(arr[i]);
+                continue;
             }
+            if (!pq.isEmpty() && pq.peek()[1] > arr[i][0]) continue;
+
+            pq.offer(arr[i]);
         }
-        System.out.println(answer);
+
+        System.out.println(pq.size());
     }
 }
