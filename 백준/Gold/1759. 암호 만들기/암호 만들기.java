@@ -1,55 +1,56 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
-    //모음개수는 l - 2개까지 가능.
     static int l, c;
-    static String[] arr, make;
     static int[] ch;
-    static List<String> moum = new LinkedList<>();
-    static List<String> res = new LinkedList<>();
-
+    static String[] arr;
+    static String[] cur;
+    static List<String> moum = new ArrayList<>();
+    static List<String> res = new ArrayList<>();
+    static StringBuilder sb = new StringBuilder();
     public static void D(int L, int start) {
         if (L == l) {
-            int cnt = 0;
-            for (int i = 0; i < make.length; i++) {
-                if (moum.contains(make[i])) cnt++;
-                if (cnt > l - 2) return;
-            }
-            if (cnt >= 1) {
-                String[] colon = make.clone();
-                Arrays.sort(colon);
-
-                StringBuilder sb = new StringBuilder();
-                for (String x : colon) {
-                    sb.append(x);
+            boolean flag = false;
+            int mounCnt = 0;
+            for (String x : cur) {
+                if (moum.contains(x)) {
+                    flag = true;
+                    mounCnt++;
                 }
-                res.add(sb.toString());
             }
-        } else {
+            if (flag && mounCnt <= l - 2) {
+                String[] copy = cur.clone();
+                Arrays.sort(copy);
+                String x = "";
+                for (String s : copy){
+                    x += s;
+                }
+                res.add(x);
+            }
+        }
+        else {
             for (int i = start; i < arr.length; i++) {
                 if (ch[i] == 0) {
                     ch[i] = 1;
-                    make[L] = arr[i];
+                    cur[L] = arr[i];
                     D(L + 1, i + 1);
                     ch[i] = 0;
                 }
             }
         }
     }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] z = br.readLine().split(" ");
-        l = Integer.parseInt(z[0]);
-        c = Integer.parseInt(z[1]);
+        String[] s = br.readLine().split(" ");
+        l = Integer.parseInt(s[0]);
+        c = Integer.parseInt(s[1]);
         arr = new String[c];
+        cur = new String[l];
         ch = new int[c];
-        make = new String[l];
         String[] s1 = br.readLine().split(" ");
         for (int i = 0; i < c; i++) {
             arr[i] = s1[i];
@@ -63,8 +64,10 @@ public class Main {
         D(0, 0);
         Collections.sort(res);
         for (String x : res) {
-            System.out.println(x);
+            sb.append(x).append("\n");
         }
-    }
 
+        System.out.println(sb.toString());
+
+    }
 }
