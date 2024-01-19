@@ -1,26 +1,27 @@
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
-import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> a - b);
-
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int i = 0; i < n; i++) {
-            pq.offer(sc.nextInt());
+            pq.add(Integer.parseInt(br.readLine()));
         }
 
         int answer = 0;
-        while (pq.size() != 1) {
-            int a = pq.poll();
-            int  b = pq.poll();
-            int cnt = a + b;
-            answer += cnt;
-            pq.offer(cnt);
+        while (!pq.isEmpty() && pq.size() != 1) {
+            Integer p = pq.poll();
+            Integer p2 = pq.poll();
+            int sum = p + p2;
+            answer += sum;
+            pq.offer(sum);
         }
         System.out.println(answer);
+
     }
 }
