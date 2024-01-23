@@ -7,7 +7,7 @@ public class Main {
     static int n, m, answer, max;
     static int[][] arr, ch, clone;
     static boolean flag = false;
-    static List<Virus> virus = new ArrayList<>();
+    static List<int[]> virus = new ArrayList<>();
     static Queue<int[]> q = new LinkedList<>();
     static int[] dx = {1, 0, -1, 0};
     static int[] dy = {0, -1, 0, 1};
@@ -24,10 +24,10 @@ public class Main {
             return;
         } else {
             for (int i = start; i < virus.size(); i++) {
-                Virus v = virus.get(i);
-                arr[v.x][v.y] = -1;
+                int[] v = virus.get(i);
+                arr[v[0]][v[1]] = -1;
                 D(L + 1, i + 1);
-                arr[v.x][v.y] = 2;
+                arr[v[0]][v[1]] = 2;
             }
         }
     }
@@ -52,7 +52,6 @@ public class Main {
                 for (int j = 0; j < 4; j++) {
                     int nx = p[0] + dx[j];
                     int ny = p[1] + dy[j];
-
                     if (nx >= 0 && ny >= 0 && nx < n && ny < n && ch[nx][ny] == 0) {
                         if (clone[nx][ny] == 2) {
                             ch[nx][ny] = 1;
@@ -74,7 +73,7 @@ public class Main {
                 if (clone[i][j] == 0) {
                     flag = true;
                 }
-                if (virus.contains(new Virus(i, j))) {
+                if (arr[i][j] == 2) {
                     continue;
                 }
                 if (ch[i][j] == 1 /*&& !virus.contains(new int[]{i, j})*/ && clone[i][j] > max) {
@@ -102,7 +101,7 @@ public class Main {
             for (int j = 0; j < n; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
                 if (arr[i][j] == 2) {
-                    virus.add(new Virus(i, j));
+                    virus.add(new int[]{i, j});
                 }
             }
         }
@@ -115,30 +114,8 @@ public class Main {
             System.out.println(-1);
             return;
         } else System.out.println(answer);
-    
+
 
     }
 
-    static class Virus {
-        int x;
-        int y;
-
-        public Virus(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Virus virus = (Virus) o;
-            return x == virus.x && y == virus.y;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(x, y);
-        }
-    }
 }
