@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,7 +9,6 @@ public class Main {
     static int[][] arr, ch;
     static int[] dx = {1, 0, -1, 0};
     static int[] dy = {0, -1, 0, 1};
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
@@ -40,7 +37,8 @@ public class Main {
                 System.exit(0);
                 return;
             }
-        } else {
+        }
+        else {
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < n; j++) {
                     if (arr[i][j] == 0) {
@@ -54,33 +52,31 @@ public class Main {
     }
 
     private static boolean check() {
-        Queue<int[]> q = new LinkedList<>();
-        int[][] copy = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            copy[i] = arr[i].clone();
-        }
+        int dir = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (copy[i][j] == 2) {
-                    q.offer(new int[]{i, j});
-                }
-            }
-        }
-        while (!q.isEmpty()) {
-            int[] p = q.poll();
-            for (int i = 0; i < 4; i++) {
-                int x = p[0];
-                int y = p[1];
-                while (true) {
-                    x = x + dx[i];
-                    y = y + dy[i];
-                    if (x < 0 || y < 0 || x >= n || y >= n || copy[x][y] == 5) {
-                        break;
+                if (arr[i][j] == 2) {
+                    int x = i;
+                    int y = j;
+                    int cnt = 0;
+                    while (true) {
+                        if (cnt == 4) break;
+                        x = x + dx[dir];
+                        y = y + dy[dir];
+                        if (x < 0 || y < 0 || x >= n || y >= n || arr[x][y] == 5 ) {
+                            x = i;
+                            y = j;
+                            dir = (dir + 1) % 4;
+                            cnt++;
+                            continue;
+                        }
+                        if (arr[x][y] == 1) return false;
+
                     }
-                    if (copy[x][y] == 1) return false;
                 }
             }
         }
+
         return true;
     }
 }
