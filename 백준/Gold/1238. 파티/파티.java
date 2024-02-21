@@ -3,109 +3,58 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.PriorityQueue;
 
 public class Main {
+    static int n, m, x;
+    static int[] dist;
+    static ArrayList<ArrayList<int[]>> graph = new ArrayList<>(), backGraph = new ArrayList<>();
+    static PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] s = br.readLine().split(" ");
-        int n = Integer.parseInt(s[0]);
-        int m = Integer.parseInt(s[1]);
-        int x = Integer.parseInt(s[2]);
-        ArrayList<ArrayList<int[]>> graph = new ArrayList<>();
+        String[] input = br.readLine().split(" ");
+        n = Integer.parseInt(input[0]);
+        m = Integer.parseInt(input[1]);
+        x = Integer.parseInt(input[2]);
         for (int i = 0; i <= n; i++) {
             graph.add(new ArrayList<>());
+            backGraph.add(new ArrayList<>());
         }
+
         for (int i = 0; i < m; i++) {
-            String[] s1 = br.readLine().split(" ");
-            int start = Integer.parseInt(s1[0]);
-            int finish = Integer.parseInt(s1[1]);
-            int dist = Integer.parseInt(s1[2]);
-            graph.get(start).add(new int[]{finish, dist});
+            String[] s = br.readLine().split(" ");
+            int start = Integer.parseInt(s[0]);
+            int end = Integer.parseInt(s[1]);
+            int cost = Integer.parseInt(s[2]);
+            graph.get(start).add(new int[]{end, cost});
+            backGraph.get(end).add(new int[]{start, cost});
         }
 
-
-        int[] res = new int[n + 1];
-        int idx = 0;
-
+        int[] go = dijkstra(graph);
+        int[] back = dijkstra(backGraph);
+        int max = 0;
         for (int i = 1; i <= n; i++) {
-            int[] dist = new int[n + 1];
-            Arrays.fill(dist, Integer.MAX_VALUE);
             if (i == x) continue;
-            Queue<int[]> q = new LinkedList<>();
-            q.offer(new int[]{i, 0});
-            while (!q.isEmpty()) {
-                int[] p = q.poll();
-                if (p[1] > dist[p[0]]) continue;
-                for (int[] z : graph.get(p[0])) {
-                    if (dist[z[0]] > z[1] + p[1]) {
-                        dist[z[0]] = z[1] + p[1];
-                        q.offer(new int[]{z[0], p[1] + z[1]});
-                    }
-                }
-            }
-//            for (int j = 0; j < dist.length; j++) {
-//                System.out.print(dist[j] + " ");
-//            }
-//            System.out.println();
-            res[idx++] = dist[x];
+            max = Math.max(max, go[i] + back[i]);
         }
-//
-//        System.out.println("=====res=====");
-//        for (int i = 0; i < res.length; i++) {
-//            System.out.print(res[i] + " ");
-//        }
+        System.out.println(max);
+    }
 
-        int[] dist22 = new int[n + 1];
-        Arrays.fill(dist22, Integer.MAX_VALUE);
-        int idx22 = 0;
-        int[] res2 = new int[n + 1];
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{x, 0});
-        while (!q.isEmpty()) {
-            int[] p = q.poll();
-            if (p[1] > dist22[p[0]]) continue;
-            for (int[] z : graph.get(p[0])) {
-                if (dist22[z[0]] > z[1] + p[1]) {
-                    dist22[z[0]] = z[1] + p[1];
-                    q.offer(new int[]{z[0], p[1] + z[1]});
+    private static int[] dijkstra(ArrayList<ArrayList<int[]>> graph) {
+        int[] cost = new int[n + 1];
+        Arrays.fill(cost, Integer.MAX_VALUE);
+        pq.offer(new int[]{x, 0});
+        while (!pq.isEmpty()) {
+            int[] p = pq.poll();
+            if (p[1] > cost[p[0]]) continue;
+            for (int[] x : graph.get(p[0])) {
+                if (cost[x[0]] > p[1] + x[1]) {
+                    cost[x[0]] = p[1] + x[1];
+                    pq.offer(new int[]{x[0], x[1] + p[1]});
                 }
             }
         }
-//        System.out.println("====res2====");
-//        for (int j = 0; j < res2.length; j++) {
-//            System.out.print(res2[j] + " ");
-//        }
-//        System.out.println();
-        for (int i = 0; i < dist22.length - 1; i++) {
-            if (i != x - 1) {
-                res2[idx22++] = dist22[i + 1];
-            }
-        }
-//        System.out.println();
-
-//        System.out.println("====dist22====");
-//        for (int j = 0; j < dist22.length; j++) {
-//            System.out.print(dist22[j] + " ");
-//        }
-//        System.out.println("====res====");
-//        for (int j = 0; j < res.length; j++) {
-//            System.out.print(res[j] + " ");
-//        }
-//        System.out.println();
-//        System.out.println("====res2====");
-//        for (int j = 0; j < res2.length; j++) {
-//            System.out.print(res2[j] + " ");
-//        }
-
-        int answer = Integer.MIN_VALUE;
-        for (int i = 0; i < res.length; i++) {
-            if (res[i] != 0 && res2[i] != 0) {
-                answer = Math.max(answer, res[i] + res2[i]);
-            }
-        }
-        System.out.println(answer);
-
+        return cost;
     }
 }
