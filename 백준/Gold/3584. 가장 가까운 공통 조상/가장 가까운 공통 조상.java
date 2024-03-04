@@ -2,14 +2,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     static int n;
     static ArrayList<ArrayList<Integer>> graph;
-    static LinkedList<Integer> a = new LinkedList<>();
-    static LinkedList<Integer> b = new LinkedList<>();
+    static List<Integer> a = new ArrayList<>();
+    static List<Integer> b = new ArrayList<>();
     static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,18 +29,11 @@ public class Main {
             String[] s = br.readLine().split(" ");
             int resx = Integer.parseInt(s[0]);
             int resy = Integer.parseInt(s[1]);
-            if (resy == resx) {
-                sb.append(resx).append("\n");
-                continue;
-            }
-            int[] ch = new int[n + 1];
-            D(resx, a, ch);
-            ch = new int[n + 1];
-            D(resy, b, ch);
-
+            D(resx, a);
+            D(resy, b);
             boolean flag = false;
-            for (int j = a.size()-1; j >= 0; j--) {
-                for (int k = b.size()-1; k >= 0; k--) {
+            for (int j = 0; j < a.size(); j++) {
+                for (int k = 0; k < b.size(); k++) {
                     if (a.get(j).equals(b.get(k))) {
                         sb.append(a.get(j)).append("\n");
                         flag = true;
@@ -52,21 +44,15 @@ public class Main {
             }
             a.clear();
             b.clear();
-            for (int j = 0; j < graph.size(); j++) {
-                graph.get(j).clear();
-            }
+
         }
         System.out.println(sb);
     }
 
-    private static void D(int idx, LinkedList<Integer> a, int[] ch) {
-        ch[idx] = 1;
-        for (int x : graph.get(idx)) {
-            if (ch[x] == 0 && graph.get(idx).size() > 0) {
-                D(x, a, ch);
-            }
-        }
+    private static void D(int idx, List<Integer> a) {
         a.add(idx);
-
+        for (int x : graph.get(idx)) {
+            D(x, a);
+        }
     }
 }
