@@ -4,41 +4,34 @@ import java.io.InputStreamReader;
 
 public class Main {
     static int n;
-    static int[] ch;
-    static StringBuilder sb = new StringBuilder();
-
-    public static void D(int L, String str) {
-        //소수판별
+    static StringBuilder res = new StringBuilder();
+    static void D(int L, String str) {
         if (!str.equals("")) {
-            int cur = Integer.parseInt(str);
-            boolean flag = true;
-            if (cur < 2) flag = false;
-            else if (cur == 2) flag = true;
-            else {
-                for (int i = 2; i <= Math.sqrt(cur); i++) {
-                    if (cur % i == 0) {
-                        flag = false;
-                    }
-                }
-            }
-
-            if (!flag) return;
-            if (L == n && String.valueOf(Integer.parseInt(str)).length() == n) {
-                sb.append(Integer.parseInt(str)).append("\n");
+            if (!check(str)) return;
+            if (L == n && str.length() == n) {
+                res.append(str).append("\n");
                 return;
             }
         }
-        for (int i = 0; i <= 9; i++) {
+        for (int i = 1; i <= 9; i++) {
             D(L + 1, str + i);
         }
+    }
+
+    private static boolean check(String substring) {
+        int ch = Integer.parseInt(substring);
+        if (ch == 1) return false;
+        if (ch == 2 || ch == 3) return true;
+        for (int i = 2; i <= Math.sqrt(ch); i++) {
+            if (ch % i == 0) return false;
+        }
+        return true;
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
-        ch = new int[n];
         D(0, "");
-
-        System.out.println(sb.toString());
+        System.out.println(res);
     }
 }
