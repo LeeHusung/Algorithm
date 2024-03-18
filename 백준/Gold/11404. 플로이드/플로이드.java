@@ -28,9 +28,12 @@ public class Main {
             pq.offer(new int[]{i, 0});
             while (!pq.isEmpty()) {
                 int[] p = pq.poll();
+                
                 if (dist[p[0]] < p[1]) continue;
                 for (int[] x : graph.get(p[0])) {
+                    if (x[0] == i) continue;
                     if (dist[x[0]] > x[1] + p[1]) {
+                   
                         dist[x[0]] = x[1] + p[1];
                         pq.offer(new int[]{x[0], x[1] + p[1]});
                     }
