@@ -2,32 +2,38 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    static int n;
-    static List<Integer> list = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        n = Integer.parseInt(br.readLine());
-        for (int i = 1; i <= n; i++) {
-            if (check(i)) {
-                list.add(i);
+        int n = Integer.parseInt(br.readLine());
+        boolean[] arr = new boolean[n + 1];
+        List<Integer> list = new ArrayList<>();
+        for (int i = 2; i <= n; i++) {
+            if (arr[i]) continue;
+            list.add(i);
+            for (int j = i * 2; j <= n; j+= i) {
+                arr[j] = true;
             }
         }
 
+        int[] result = list.stream().mapToInt(Integer::intValue).toArray();
         long answer = 0;
-        for (int i = 0; i < list.size(); i++) {
-            long sum = 0;
-            for (int j = i; j < list.size(); j++) {
-                sum += list.get(j);
-                if (sum > n) break;
-                if (sum == n) {
-                    answer++;
-                    break;
+        int x = 0;
+        long sum = 0;
+        for (int y = 0; y < result.length; y++) {
+            sum += result[y];
+            if (sum > n) {
+                while (true) {
+                    sum -= result[x++];
+                    if (sum <= n) break;
                 }
             }
+            if (sum == n) answer++;
         }
+
         System.out.println(answer);
         
     }
