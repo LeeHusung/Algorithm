@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,20 +7,17 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
-    static int n, m;
-    static int[][] arr, dp;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] s = br.readLine().split(" ");
-        n = Integer.parseInt(s[0]);
-        m = Integer.parseInt(s[1]);
-        arr = new int[n + 1][m + 1];
-        dp = new int[n + 1][m + 1];
+        int n = Integer.parseInt(s[0]);
+        int m = Integer.parseInt(s[1]);
+        int[][] arr = new int[n + 1][m + 1];
+        int[][] dp = new int[n + 1][m + 1];
         for (int i = 1; i <= n; i++) {
-            String[] s1 = br.readLine().split("");
+            String str = br.readLine();
             for (int j = 1; j <= m; j++) {
-                arr[i][j] = Integer.parseInt(s1[j - 1]);
+                arr[i][j] = str.charAt(j - 1) - '0';
             }
         }
         int max = 0;
@@ -33,7 +29,6 @@ public class Main {
                 }
             }
         }
-
 
         System.out.println(max *max);
 
