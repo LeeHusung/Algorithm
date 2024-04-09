@@ -8,18 +8,18 @@ import java.util.StringTokenizer;
 
 public class Main {
     static int v, e;
-    static ArrayList<ArrayList<int[]>> graph = new ArrayList<>();
-    static PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+    static long[][] dist;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] s = br.readLine().split(" ");
         v = Integer.parseInt(s[0]);
         e = Integer.parseInt(s[1]);
-        for (int i = 0; i <= v; i++) {
-            graph.add(new ArrayList<>());
+        dist = new long[v + 1][v + 1];
+        for (int i = 1; i < dist.length; i++) {
+            Arrays.fill(dist[i], Integer.MAX_VALUE);
         }
 
-        int answer = Integer.MAX_VALUE;
+        long answer = Integer.MAX_VALUE;
 
         StringTokenizer st;
         for (int i = 0; i < e; i++) {
@@ -27,12 +27,13 @@ public class Main {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
-            graph.get(a).add(new int[]{b, c});
+            dist[a][b] = Math.min(dist[a][b], c);
         }
 
+        FloydWarshall();
+
         for (int i = 1; i <= v; i++) {
-            int min = dijkstra(i);
-            answer = Math.min(answer, min);
+            answer = Math.min(answer, dist[i][i]);
         }
         if (answer == Integer.MAX_VALUE) {
             System.out.println(-1);
@@ -40,21 +41,14 @@ public class Main {
 
     }
 
-    private static int dijkstra(int num) {
-        int[] dist = new int[v + 1];
-        Arrays.fill(dist, Integer.MAX_VALUE);
-        pq.offer(new int[]{num, 0});
-        while (!pq.isEmpty()) {
-            int[] p = pq.poll();
-            if (dist[p[0]] < p[1]) continue;
-            for (int[] x : graph.get(p[0])) {
-                if (p[1] + x[1] < dist[x[0]]) {
-                    dist[x[0]] = p[1] + x[1];
-                    pq.offer(new int[]{x[0], p[1] + x[1]});
+    private static void FloydWarshall() {
+        for (int i = 1; i <= v; i++) {
+            for (int j = 1; j <= v; j++) {
+                for (int k = 1; k <= v; k++) {
+                    dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
                 }
             }
         }
-        return dist[num];
     }
 
 }
