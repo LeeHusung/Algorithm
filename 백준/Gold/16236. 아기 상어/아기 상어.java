@@ -1,71 +1,81 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class Main {
-
-    static int n, startX, startY, weight, eat;
+    static int n, sharkSize;
+    static int[] start;
     static int[] dx = {1, 0, -1, 0};
     static int[] dy = {0, -1, 0, 1};
-    static int[][] arr;
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-
+    static int[][] arr, ch;
+    static PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2] == b[2] ? (a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]) : a[2] - b[2]);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(br.readLine());
         arr = new int[n][n];
+        ch = new int[n][n];
+        start = new int[2];
+        StringTokenizer st;
         for (int i = 0; i < n; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
             for (int j = 0; j < n; j++) {
-                arr[i][j] = sc.nextInt();
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+                arr[i][j] = Integer.parseInt(st.nextToken());
                 if (arr[i][j] == 9) {
-                    startX = i;
-                    startY = j;
-                    arr[i][j] = 0;
+                    start[0] = i;
+                    start[1] = j;
                 }
             }
         }
+        sharkSize = 2;
+        int time = 0;
+        int cnt = 0;
 
-        int result = 0;
-        weight = 2;
         while (true) {
-
-            int[] fish = bfs();
-            if (fish == null) break;
-            result += fish[2];
-            startX = fish[0];
-            startY = fish[1];
-            arr[startX][startY] = 0;
-            eat++;
-            if (weight == eat) {
-                weight++;
-                eat = 0;
+            if (!canEat()) break;
+            int[] next = pq.poll();
+            time += next[2];
+            arr[start[0]][start[1]] = 0;
+            cnt++;
+            if (sharkSize == cnt) {
+                sharkSize++;
+                cnt = 0;
             }
-
+            start = next;
+            pq.clear();
         }
-        System.out.println(result);
+        System.out.println(time);
     }
 
-    private static int[] bfs() {
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2] == b[2] ? (a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]) : a[2] - b[2]);
-        int[][] ch = new int[n][n];
-        ch[startX][startY] = 1;
-        pq.offer(new int[]{startX, startY, 0});
-
-        while (!pq.isEmpty()) {
-            int[] p = pq.poll();
-            int x = p[0], y = p[1], dist = p[2];
-            if (arr[x][y] != 0 && arr[x][y] < weight) return new int[]{x, y, dist};
-            for (int i = 0; i < 4; i++) {
-                int nx = x + dx[i];
-                int ny = y + dy[i];
-                if (nx >= 0 && ny >= 0 && nx < n && ny < n && ch[nx][ny] == 0 && arr[nx][ny] <= weight) {
-                    ch[nx][ny] = 1;
-                    pq.offer(new int[]{nx, ny, dist + 1});
+    private static boolean canEat() {
+        boolean flag = false;
+        int dist = 0;
+        Queue<int[]> q = new ArrayDeque<>();
+        ch = new int[n][n];
+        q.offer(start);
+        ch[start[0]][start[1]] = 1;
+        while (!q.isEmpty()) {
+            int len = q.size();
+            dist++;
+            for (int i = 0; i < len; i++) {
+                int[] p = q.poll();
+                for (int j = 0; j < 4; j++) {
+                    int nx = p[0] + dx[j];
+                    int ny = p[1] + dy[j];
+                    if (nx >= 0 && ny >= 0 && nx < n && ny < n && arr[nx][ny] <= sharkSize && ch[nx][ny] == 0) { //지나갈 수 있음
+                        if (arr[nx][ny] > 0 && arr[nx][ny] < sharkSize) { //먹을 수 있음
+                            pq.offer(new int[]{nx, ny, dist});
+                            flag = true;
+                        }
+                        ch[nx][ny] = 1;
+                        q.offer(new int[]{nx, ny});
+                    }
                 }
             }
         }
-        return null;
+        return flag;
     }
 }
