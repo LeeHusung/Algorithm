@@ -1,45 +1,43 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int[] arr = new int[m];
-        int sum = 0;
-        int answer = 0;
-        int left = 1;
-        int right = 0;
+        int start = 1;
+        int end = 0;
         for (int i = 0; i < m; i++) {
             arr[i] = Integer.parseInt(br.readLine());
-            sum += arr[i];
-            right = Math.max(arr[i], right);
+            end = Math.max(end, arr[i]);
         }
+        int res = Integer.MAX_VALUE;
 
-        while (left <= right) {
-            int middle = (left + right) / 2;
+        while (start <= end) {
+            int middle = (start + end) / 2;
             int cnt = 0;
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] > middle) {
                     cnt += arr[i] / middle;
                     if (arr[i] % middle != 0) cnt++;
-                } else if (arr[i] <= middle) {
-                    cnt += 1;
-                }
+                } else cnt++;
             }
-            if (cnt <= n) {
-                answer = middle;
-                right = middle - 1;
-
+            if (cnt > n) {
+                start = middle + 1;
             } else {
-                left = middle + 1;
+                end = middle - 1;
+                res = middle;
             }
         }
-        System.out.println(answer);
+        System.out.println(res);
+
 
     }
 }
