@@ -10,44 +10,31 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         int m = Integer.parseInt(br.readLine());
-        int[][] arr = new int[m][2];
+        int[][] arr = new int[n + 1][n + 1];
         for (int i = 0; i < m; i++) {
             String[] s = br.readLine().split(" ");
-            arr[i][0] = Integer.parseInt(s[0]);
-            arr[i][1] = Integer.parseInt(s[1]);
+            int x = Integer.parseInt(s[0]);
+            int y = Integer.parseInt(s[1]);
+            arr[x][y] = 1;
         }
-        Arrays.sort(arr, (a, b) -> a[0] - b[0]);
 
         StringBuilder sb = new StringBuilder();
-        Queue<Integer> q = new ArrayDeque<>();
         for (int i = 1; i <= n; i++) {
-            int[] ch = new int[n + 1];
-            q.offer(i);
-            ch[i] = 1;
-            int cnt = 1;
-            while (!q.isEmpty()) {
-                Integer p = q.poll();
-                for (int j = 0; j < arr.length; j++) {
-                    if (arr[j][0] == p && ch[arr[j][1]] == 0) {
-                        q.offer(arr[j][1]);
-                        ch[arr[j][1]] = 1;
-                        cnt++;
-                    }
+            for (int j = 1; j <= n; j++) {
+                for (int k = 1; k <= n; k++) {
+                    if (i == k) continue;
+                    if (arr[j][i] == 1 && arr[i][k] == 1) arr[j][k] = 1;
                 }
             }
-            q.offer(i);
-            while (!q.isEmpty()) {
-                Integer p = q.poll();
-                for (int j = 0; j < arr.length; j++) {
-                    if (arr[j][1] == p && ch[arr[j][0]] == 0) {
-                        q.offer(arr[j][0]);
-                        ch[arr[j][0]] = 1;
-                        cnt++;
-                    }
-                }
-            }
-            sb.append(n - cnt).append("\n");
         }
+        for (int i = 1; i <= n; i++) {
+            int cnt = 0;
+            for (int j = 1; j <= n; j++) {
+                if (arr[i][j] == 0 && arr[j][i] == 0) cnt++;
+            }
+            sb.append(cnt - 1).append("\n");
+        }
+
         System.out.println(sb);
     }
 }
