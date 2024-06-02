@@ -23,25 +23,31 @@ public class Main {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        D(0, 0, 0, 0);
+        D(0, 0, 0);
         System.out.println(max);
     }
 
-    private static void D(int L, int x, int y, int sum) {
+    private static void D(int L, int start, int sum) {
         if (L == k) {
             max = Math.max(max, sum);
             return;
         }
-        for (int i = x; i < n; i++) {
-            for (int j = y; j < m; j++) {
-                if (ch[i][j] == 0) {
-                    if (check(i, j)) {
-                        ch[i][j] = 1;
-                        D(L + 1, x, y, sum + arr[i][j]);
-                        ch[i][j] = 0;
-                    }
+        go:
+        for (int i = start; i < n * m; i++) {
+            int x = i / m;
+            int y = i % m;
+            if (ch[x][y] == 1) continue;
+            for (int j = 0; j < 4; j++) {
+                int nx = x + dx[j];
+                int ny = y + dy[j];
+                if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+                if (ch[nx][ny] == 1) {
+                    continue go;
                 }
             }
+            ch[x][y] = 1;
+            D(L + 1, i + 1, sum + arr[x][y]);
+            ch[x][y] = 0;
         }
 
     }
