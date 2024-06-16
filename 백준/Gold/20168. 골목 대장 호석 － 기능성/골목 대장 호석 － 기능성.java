@@ -27,7 +27,7 @@ public class Main {
                 D(p[0], cost -= p[1]);
                 costs.pollLast();
                 cost += p[1];
-                ch[p[0]] = 1;
+                ch[p[0]] = 0;
             }
         }
     }
