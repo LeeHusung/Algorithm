@@ -35,13 +35,38 @@ public class Main {
 
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < aa.length; i++) {
-            for (int j = 0; j < bb.length; j++) {
-                for (int k = 0; k < cc.length; k++) {
-                    int x = Math.abs(Math.max(aa[i], Math.max(bb[j], cc[k])) - Math.min(aa[i], Math.min(bb[j], cc[k])));
-                    min = Math.min(min, x);
-                }
-            }
+            int num1 = binary(aa[i], bb);
+            int num2 = binary(aa[i], cc);
+            min = Math.min(min, Math.abs(Math.max(aa[i], Math.max(num2, num1)) - Math.min(aa[i], Math.min(num2, num1))));
+        }
+        for (int i = 0; i < bb.length; i++) {
+            int num1 = binary(bb[i], aa);
+            int num2 = binary(bb[i], cc);
+            min = Math.min(min, Math.abs(Math.max(bb[i], Math.max(num2, num1)) - Math.min(bb[i], Math.min(num2, num1))));
+        }
+        for (int i = 0; i < cc.length; i++) {
+            int num1 = binary(cc[i], bb);
+            int num2 = binary(cc[i], aa);
+            min = Math.min(min, Math.abs(Math.max(cc[i], Math.max(num2, num1)) - Math.min(cc[i], Math.min(num2, num1))));
         }
         System.out.println(min);
+    }
+
+    private static int binary(int num, int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        int tmp = 0;
+        int max = Integer.MAX_VALUE;
+        while (start <= end) {
+            int middle = (start + end) / 2;
+            if (Math.abs(num - arr[middle]) < max) {
+                max = Math.abs(num - arr[middle]);
+                tmp = arr[middle];
+            }
+            if (arr[middle] > num) {
+                end = middle - 1;
+            } else start = middle + 1;
+        }
+        return tmp;
     }
 }
