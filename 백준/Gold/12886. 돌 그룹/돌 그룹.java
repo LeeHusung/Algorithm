@@ -41,9 +41,11 @@ public class Main {
         int x = Integer.parseInt(st.nextToken());
         int y = Integer.parseInt(st.nextToken());
         int z = Integer.parseInt(st.nextToken());
+        int[][] ch = new int[1501][1501];
+    
         Queue<Node> q = new ArrayDeque<>();
         q.offer(new Node(x, y, z));
-        Set<Node> set = new HashSet<>();
+        ch[x][y] = 1;
         while (!q.isEmpty()) {
             Node p = q.poll();
             int one = p.x;
@@ -54,30 +56,30 @@ public class Main {
                 System.out.println(1);
                 return;
             }
-            if (one > two && !set.contains(new Node(one - two, two + two, three))) {
+            if (one > two && ch[one][two] == 0) {
+                ch[one][two] = 1;
                 q.offer(new Node(one - two, two + two, three));
-                set.add(new Node(one - two, two + two, three));
             }
-            if (one < two && !set.contains(new Node(one + one, two - one, three))) {
+            if (one < two && ch[one][two] == 0) {
+                ch[one][two] = 1;
                 q.offer(new Node(one + one, two - one, three));
-                set.add(new Node(one + one, two - one, three));
             }
 
-            if (one < three && !set.contains(new Node(one + one, two, three - one))) {
+            if (one < three && ch[one][three] == 0) {
+                ch[one][three] = 1;
                 q.offer(new Node(one + one, two, three - one));
-                set.add(new Node(one + one, two, three - one));
             }
-            if (one > three && !set.contains(new Node(one - three, two, three + three))) {
+            if (one > three && ch[one][three] == 0) {
+                ch[one][three] = 1;
                 q.offer(new Node(one - three, two, three + three));
-                set.add(new Node(one - three, two, three + three));
             }
-            if (two > three && !set.contains(new Node(one, two - three, three + three))) {
+            if (two > three && ch[two][three] == 0) {
+                ch[two][three] = 1;
                 q.offer(new Node(one, two - three, three + three));
-                set.add(new Node(one, two - three, three + three));
             }
-            if (two < three && !set.contains(new Node(one, two + two, three - two))) {
+            if (two < three && ch[two][three] == 0) {
+                ch[two][three] = 1;
                 q.offer(new Node(one, two + two, three - two));
-                set.add(new Node(one, two + two, three - two));
             }
         }
         System.out.println(0);
