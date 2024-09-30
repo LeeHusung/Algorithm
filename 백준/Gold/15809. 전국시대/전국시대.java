@@ -59,38 +59,35 @@ public class Main {
     private static void fight(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
-
-        if (rootX == rootY) return; // 같은 나라면 싸울 필요 없음
-
-        if (arr[rootX] < arr[rootY]) {
-            arr[rootY] -= arr[rootX];
-            arr[rootX] = 0;
-            parent[rootX] = rootY; // x가 y에게 병합됨
-        } else if (arr[rootX] > arr[rootY]) {
+        if (rootX == rootY) return;
+        if (arr[rootX] > arr[rootY]) {
             arr[rootX] -= arr[rootY];
             arr[rootY] = 0;
-            parent[rootY] = rootX; // y가 x에게 병합됨
-        } else { // 병력이 같은 경우
+            parent[rootY] = rootX;
+        } else if (arr[rootX] < arr[rootY]) {
+            arr[rootY] -= arr[rootX];
+            arr[rootX] = 0;
+            parent[rootX] = rootY;
+        } else {
+            parent[rootX] = parent[rootY] = 0;
             arr[rootX] = arr[rootY] = 0;
-            parent[rootX] = parent[rootY] = 0; // 둘 다 멸망
         }
+
     }
 
     private static void union(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
-
-        if (rootX != rootY) {
-            if (rootX < rootY) {
-                parent[rootY] = rootX;
-                arr[rootX] += arr[rootY];
-                arr[rootY] = 0;
-            } else {
-                parent[rootX] = rootY;
-                arr[rootY] += arr[rootX];
-                arr[rootX] = 0;
-            }
+        if (rootY > rootX) {
+            parent[rootX] = rootY;
+            arr[rootY] += arr[rootX];
+            arr[rootX] = 0;
+        } else {
+            parent[rootY] = rootX;
+            arr[rootX] += arr[rootY];
+            arr[rootY] = 0;
         }
+
     }
 
     private static int find(int x) {
