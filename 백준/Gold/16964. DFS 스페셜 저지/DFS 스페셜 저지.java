@@ -4,19 +4,18 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.StringTokenizer;
 
 public class Main {
     static int n;
-    static int[] ch, tmp;
+    static int[] ch;
     static ArrayList<ArrayList<Integer>> graph;
     static List<Integer> arr = new ArrayList<>();
     static int idx = 1;
     static boolean flag;
     private static void D(int x) {
         if (!flag) return;
-        Set<Integer> set = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
         for (Integer p : graph.get(x)) {
             if (ch[p] == 0) {
                 ch[p] = 1;
@@ -26,7 +25,7 @@ public class Main {
 
         int size = set.size();
         for (int i = 0; i < size; i++) {
-            if (set.remove(arr.get(idx))) {
+            if (set.contains(arr.get(idx))) {
                 D(arr.get(idx++));
             } else {
                 flag = false;
@@ -51,7 +50,6 @@ public class Main {
             graph.get(y).add(x);
         }
 
-        tmp = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < n; i++) {
             arr.add(Integer.parseInt(st.nextToken()));
@@ -70,6 +68,5 @@ public class Main {
         }
 
         System.out.println(1);
-
     }
 }
