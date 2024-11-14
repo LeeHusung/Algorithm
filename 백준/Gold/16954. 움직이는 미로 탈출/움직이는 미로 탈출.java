@@ -43,11 +43,7 @@ public class Main {
                     System.out.println(1);
                     return;
                 }
-//                System.out.println(p[0] + " " + p[1]);
-//                if (p[0] == 0) {
-//                    flag = true;
-//                    break;
-//                }
+
                 for (int i = 0; i < 9; i++) {
                     int nx = p[0] + dx[i];
                     int ny = p[1] + dy[i];
@@ -65,13 +61,19 @@ public class Main {
     }
 
     private static void down() {
-        for (int i = 8 - 2; i >= 0; i--) {
-            for (int j = 0; j < 8; j++)
-                arr[i + 1][j] = arr[i][j];
+        for (int i = 0; i < 8; i++) {
+            if (arr[7][i] == 1) {
+                arr[7][i] = 0;
+            }
         }
-
-        for (int i = 0; i < 8; i++)
-            arr[0][i] = 0;
+        for (int i = 7; i >= 1; i--) {
+            for (int j = 0; j < 8; j++) {
+                if (arr[i - 1][j] == 1) {
+                    arr[i][j] = 1;
+                    arr[i - 1][j] = 0;
+                }
+            }
+        }
     }
 
     private static boolean isValid(int nx, int ny) {
