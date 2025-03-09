@@ -15,9 +15,14 @@ class Solution {
 
         int answer = 0;
         Arrays.sort(words, Comparator.comparingInt(String::length));
-        for (int i = 0; i < words.length; i++) {
-            if ((pairs -= words[i].length() / 2) < 0) return i;
+
+        for (String str : words) {
+            int need = str.length() / 2;
+            if (pairs >= need) {
+                answer++;
+                pairs -= need;
+            }
         }
-        return n;
+        return answer;
     }
 }
