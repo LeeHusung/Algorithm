@@ -1,21 +1,17 @@
 import java.util.*;
 class Solution {
     public int[] minOperations(String boxes) {
-        Set<Integer> set = new HashSet<>();
-        char[] arr = boxes.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if (String.valueOf(arr[i]).equals("1")) {
-                set.add(i);
-            }
-        }
+        int[] answer = new int[boxes.length()];
 
-        int[] answer = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
-            for (int x : set) {
-                sum += Math.abs(x - i);
-            }
-            answer[i] = sum;
+        for (int i = 0, cnt = 0, sum = 0; i < answer.length; i++) {
+            answer[i] += sum;
+            cnt += boxes.charAt(i) == '1' ? 1 : 0;
+            sum += cnt;
+        }
+        for (int i = answer.length - 1, cnt = 0, sum = 0; i >= 0; i--) {
+            answer[i] += sum;
+            cnt += boxes.charAt(i) == '1' ? 1 : 0;
+            sum += cnt;
         }
         return answer;
     }
