@@ -10,4 +10,4 @@ LEFT JOIN (
     where t1.state = 'approved'
     GROUP BY TO_CHAR(t1.TRANS_DATE, 'YYYY-MM'), t1.COUNTRY
 ) T2
-ON T1.month = t2.month and T2.country = t1.country
+ON T1.month = t2.month and NVL(T2.country, 0) = NVL(t1.country, 0)
