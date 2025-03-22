@@ -24,9 +24,8 @@ public class Main {
             graph.get(b).add(new int[]{a, c});
         }
 
-        Queue<int[]> q = new ArrayDeque<>();
+        PriorityQueue<int[]> q = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         q.offer(new int[]{1, 0});
-        int[] ch = new int[n + 1];
         int[] arr = new int[n + 1];
         for (int i = 0; i < n + 1; i++) {
             arr[i] = Integer.MAX_VALUE;
@@ -34,6 +33,7 @@ public class Main {
 
         while (!q.isEmpty()) {
             int[] cur = q.poll();
+            if (cur[0] == n) break;
             if (cur[1] > arr[cur[0]]) continue;
             for (int[] x : graph.get(cur[0])) {
                 if (arr[x[0]] > cur[1] + x[1]) {
