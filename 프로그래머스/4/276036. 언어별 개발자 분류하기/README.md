@@ -1,6 +1,6 @@
 # [level 4] 언어별 개발자 분류하기 - 276036 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/276036) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/276036?language=mysql) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 05월 20일 13:29:16
+2025년 05월 20일 16:35:53
 
 ### 문제 설명
 
