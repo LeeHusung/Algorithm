@@ -29,7 +29,7 @@ class Solution {
             bSum += x;
         }
         int cnt = 0;
-        while (cnt <= queue1.length * 3) {
+        while (cnt <= queue1.length * 3 - 1) {
             if (aSum == goal) {                
                 return cnt;
             }
