@@ -1,16 +1,7 @@
-SELECT T1.ID, T1.EMAIL, T1.FIRST_NAME, T1.LAST_NAME
+SELECT DISTINCT T1.ID, T1.EMAIL, T1.FIRST_NAME, T1.LAST_NAME
 FROM DEVELOPERS T1
-WHERE T1.SKILL_CODE & (SELECT CODE
-                        FROM SKILLCODES
-                        WHERE NAME = 'Python')
-                        > 0
-        OR 
-        T1.SKILL_CODE & (SELECT CODE
-                        FROM SKILLCODES
-                        WHERE NAME = 'C#')
-                        > 0
+JOIN SKILLCODES T2
+ON (T1.SKILL_CODE & T2.CODE) > 0
+WHERE T2.NAME = 'Python' OR T2.NAME = 'C#'
 ORDER BY 1;
 
-# SELECT CODE
-# FROM SKILLCODES
-# WHERE NAME = 'Python' OR NAME = 'C#';
