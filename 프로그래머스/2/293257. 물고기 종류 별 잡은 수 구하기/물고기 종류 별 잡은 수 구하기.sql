@@ -1,9 +1,8 @@
-select t1.cnt fish_count, t2.fish_name
-from (
-    select count(id) cnt, fish_type
-    from fish_info
-    group by fish_type
-) t1
-left join fish_name_info t2
-    on t1.fish_type = t2.fish_type
-order by 1 desc
+SELECT COUNT(f.id) AS FISH_COUNT,
+        n.fish_name AS FISH_NAME
+       
+FROM fish_name_info n
+JOIN fish_info f
+       ON n.fish_type = f.fish_type
+GROUP BY n.fish_name
+ORDER BY FISH_COUNT DESC;
