@@ -1,0 +1,50 @@
+-- SELECT ID
+-- FROM FRIENDS
+-- WHERE ACTIVITY NOT IN (
+--     SELECT MAX(ACTIVITY)
+--     FROM FRIENDS
+--     GROUP BY ACTIVITY
+-- )
+
+
+-- SELECT ID, NAME, T1.CNT
+-- FROM ACTIVITIES A
+-- JOIN (
+--     SELECT ACTIVITY, COUNT(ACTIVITY) CNT
+--     FROM FRIENDS
+--     GROUP BY ACTIVITY
+-- ) T1
+--     ON A.NAME = T1.ACTIVITY
+
+    SELECT T2.ACTIVITY
+    FROM (
+            SELECT ACTIVITY, COUNT(ACTIVITY) CNT
+            FROM FRIENDS
+            GROUP BY ACTIVITY
+    ) T2
+    WHERE  (SELECT MAX(TMP.CNT) MAX
+            FROM (    
+                SELECT ACTIVITY, COUNT(ACTIVITY) CNT
+                FROM FRIENDS
+                GROUP BY ACTIVITY
+                ) TMP
+            ) != T2.CNT
+            AND 
+            (SELECT MIN(TMP.CNT) MIN
+            FROM (    
+                SELECT ACTIVITY, COUNT(ACTIVITY) CNT
+                FROM FRIENDS
+                GROUP BY ACTIVITY
+                ) TMP
+            ) != T2.CNT
+
+-- SELECT ACTIVITY
+-- FROM FRIENDS
+-- WHERE (SELECT COUNT(ACTIVITY) FROM FRIENDS GROUP BY ACTIVITY) != (
+--     SELECT MAX(TMP.CNT) MAX, MIN(TMP.CNT) MIN
+--     FROM (    
+--         SELECT ACTIVITY, COUNT(ACTIVITY) CNT
+--         FROM FRIENDS
+--         GROUP BY ACTIVITY
+--         ) TMP
+-- )
