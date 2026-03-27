@@ -36,7 +36,7 @@ class Solution {
             else if (s.charAt(i) == 'b') b++;
             else c++;
             int one = a - b;
-            int two = a - c;
+            int two = b - c;
             String key = one + "#" + two;
             if (strMap.containsKey(key)) {
                 threemax = Math.max(threemax, i - strMap.get(key));
