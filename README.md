@@ -13,6 +13,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
+| [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 ## String
 | Problem Name | Difficulty |
@@ -26,6 +27,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
 ## Dynamic Programming
@@ -42,4 +44,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 <!---LeetCode Topics End-->
