@@ -13,6 +13,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
+| [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 ## String
@@ -24,6 +25,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
+| [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -47,9 +49,18 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
+## Counting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
+## Enumeration
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 <!---LeetCode Topics End-->
