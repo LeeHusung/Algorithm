@@ -20,6 +20,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
+| [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/LeeHusung/Algorithm/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -63,4 +64,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/LeeHusung/Algorithm/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
 <!---LeetCode Topics End-->
