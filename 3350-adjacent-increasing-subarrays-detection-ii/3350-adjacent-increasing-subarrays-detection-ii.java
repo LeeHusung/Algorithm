@@ -4,26 +4,17 @@ class Solution {
         int result = Integer.MIN_VALUE;
         List<Integer> list = new ArrayList<>();
         int tmp = 1;
-        
-        for (int i = 0; i < nums.size() - 1; i++) {
-            if (nums.get(i) < nums.get(i + 1)) {
+        int prev = 0;
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums.get(i) > nums.get(i - 1)) {
                 tmp++;
-                continue;
             } else {
-                list.add(tmp);
+                prev = tmp;
                 tmp = 1;
             }
+            result = Math.max(result, tmp / 2);
+            result = Math.max(result, Math.min(prev, tmp));
         }
-        list.add(tmp);
-
-        int prev = 0;
-        for (int x : list) {
-            result = Math.max(result, x / 2);
-            int k = Math.min(prev, x);
-            prev = x;
-            result = Math.max(result, k);
-        }
-
 
         return result;
     }
