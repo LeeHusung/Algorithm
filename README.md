@@ -35,6 +35,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
+| [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -54,6 +55,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
+| [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -74,4 +76,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
+## Brainteaser
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
+## Combinatorics
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
 <!---LeetCode Topics End-->
