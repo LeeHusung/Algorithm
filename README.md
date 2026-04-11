@@ -8,6 +8,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0626-exchange-seats](https://github.com/LeeHusung/Algorithm/tree/master/0626-exchange-seats) |
 | [1163-project-employees-iii](https://github.com/LeeHusung/Algorithm/tree/master/1163-project-employees-iii) |
+| [1841-league-statistics](https://github.com/LeeHusung/Algorithm/tree/main/1841-league-statistics/) | Medium |
 | [3891-find-category-recommendation-pairs](https://github.com/LeeHusung/Algorithm/tree/master/3891-find-category-recommendation-pairs) |
 ## Hash Table
 | Problem Name | Difficulty |
