@@ -22,6 +22,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/LeeHusung/Algorithm/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/LeeHusung/Algorithm/tree/main/1653-minimum-deletions-to-make-string-balanced/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -40,6 +41,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/LeeHusung/Algorithm/tree/main/1653-minimum-deletions-to-make-string-balanced/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
@@ -73,6 +75,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/LeeHusung/Algorithm/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/LeeHusung/Algorithm/tree/main/1653-minimum-deletions-to-make-string-balanced/) | Medium |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
