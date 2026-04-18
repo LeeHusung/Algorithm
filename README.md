@@ -18,6 +18,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
+| [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -39,6 +40,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
 | [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
+| [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -50,6 +52,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
+| [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -89,4 +92,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
+## Divide and Conquer
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
+## Segment Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 <!---LeetCode Topics End-->
