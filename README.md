@@ -17,6 +17,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 | [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## String
@@ -40,6 +41,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
 | [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 | [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -100,4 +102,28 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
+## Depth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Breadth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Graph Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Heap (Priority Queue)
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Ordered Set
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 <!---LeetCode Topics End-->
