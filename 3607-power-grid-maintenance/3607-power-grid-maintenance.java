@@ -1,69 +1,66 @@
 import java.util.*;
 class Solution {
-    static List<SortedSet<Integer>> graph = new ArrayList<>();
     public int[] processQueries(int c, int[][] connections, int[][] queries) {
-        for (int i = 0; i <= c; i++) {
-            graph.add(new TreeSet<>());
+        Map<Integer, PriorityQueue<Integer>> map = new HashMap<>();
+        int[] parents = new int[c + 1];
+        int[] ch = new int[c + 1];
+        for (int i = 1; i <= c; i++) {
+            parents[i] = i;
+            map.put(i, new PriorityQueue<>());
         }
         for (int[] con : connections) {
-            graph.get(con[0]).add(con[1]);
-            graph.get(con[1]).add(con[0]);
+            union(con[0], con[1], parents);
         }
-        boolean[] visited = new boolean[c + 1];
+        
         for (int i = 1; i <= c; i++) {
-            if (visited[i]) continue;
-            SortedSet<Integer> component = new TreeSet<>();
-            Queue<Integer> q = new LinkedList<>();
-            q.offer(i);
-            visited[i] = true;
-            component.add(i);
-            while (!q.isEmpty()) {
-                int p = q.poll();
-                for (int nb : graph.get(p)) {   // 이 시점 graph.get(p)는 직접 이웃
-                    if (!visited[nb]) {
-                        visited[nb] = true;
-                        component.add(nb);
-                        q.offer(nb);
+            int find = find(i, parents);
+            map.get(find).offer(i);
+        }
+
+        List<Integer> res = new ArrayList<>();
+        for (int[] q : queries) {
+            if (q[0] == 2) {
+                ch[q[1]] = 1;
+            } else if (q[0] == 1) {
+                if (ch[q[1]] == 0) {
+                    res.add(q[1]);
+                } else {
+                    int num = q[1];
+                    PriorityQueue<Integer> pq = map.get(parents[num]);
+                    boolean flag = false;
+                    while (!pq.isEmpty()) {
+                        if (ch[pq.peek()] == 0) {
+                            res.add(pq.peek());
+                            flag = true;
+                            break;
+                        } else {
+                            pq.poll();
+                        }
+                    }
+                    if (!flag) {
+                        res.add(-1);
                     }
                 }
             }
-            for (int node : component) {
-                graph.set(node, component);     // 같은 참조를 공유
-            }
         }
-        int[] ch = new int[c + 1];
-        List<Integer> res = new ArrayList<>();
-        for (int[] q : queries) {
-            if (q[0] == 1) {
-                if (ch[q[1]] == 0) {
-                    res.add(q[1]);
-                } else if (ch[q[1]] == 1) {
-                    res.add(check(q[1], ch));
-                }
-            } else if (q[0] == 2) {
-                //offline
-                ch[q[1]] = 1;
-            }
-        }
-        int[] result = new int[res.size()];
+        int[] answer = new int[res.size()];
         for (int i = 0; i < res.size(); i++) {
-            result[i] = res.get(i);
+            answer[i] = res.get(i);
         }
-        graph.clear();
-        return result;
+
+        return answer;
     }
 
-    public int check(int x, int[] ch) {
-        // System.out.println("x: " + x);
-        // System.out.println("ch: " + Arrays.toString(ch));
-        while(!graph.get(x).isEmpty()) {
-            if (ch[graph.get(x).first()] == 1) {
-                graph.get(x).remove(graph.get(x).first());
-            } else {
-                return graph.get(x).first();
-            }
-        }
+    public void union(int x, int y, int[] parents) {
+        int fx = find(x, parents);
+        int fy = find(y, parents);
+        if (fx < fy) {
+            parents[fy] = fx;
+        } else parents[fx] = fy;
+    }
 
-        return -1;
+    public int find(int x, int[] parents) {
+        if (x == parents[x]) return x;
+        return parents[x] = find(parents[x], parents);
     }
 }
