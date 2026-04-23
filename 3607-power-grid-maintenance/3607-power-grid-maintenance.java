@@ -26,7 +26,7 @@ class Solution {
                     res.add(q[1]);
                 } else {
                     int num = q[1];
-                    PriorityQueue<Integer> pq = map.get(parents[num]);
+                    PriorityQueue<Integer> pq = map.get(find(num, parents));
                     boolean flag = false;
                     while (!pq.isEmpty()) {
                         if (ch[pq.peek()] == 0) {
