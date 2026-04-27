@@ -35,6 +35,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [2672-number-of-adjacent-elements-with-the-same-color](https://github.com/LeeHusung/Algorithm/tree/main/2672-number-of-adjacent-elements-with-the-same-color/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
@@ -47,6 +48,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1653-minimum-deletions-to-make-string-balanced](https://github.com/LeeHusung/Algorithm/tree/main/1653-minimum-deletions-to-make-string-balanced/) | Medium |
+| [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
@@ -85,6 +87,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 ## Brainteaser
 | Problem Name | Difficulty |
@@ -121,9 +124,14 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 <!---LeetCode Topics End-->
