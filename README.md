@@ -47,6 +47,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [2672-number-of-adjacent-elements-with-the-same-color](https://github.com/LeeHusung/Algorithm/tree/main/2672-number-of-adjacent-elements-with-the-same-color/) | Medium |
+| [2943-maximize-area-of-square-hole-in-grid](https://github.com/LeeHusung/Algorithm/tree/main/2943-maximize-area-of-square-hole-in-grid/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
@@ -145,6 +146,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
+| [2943-maximize-area-of-square-hole-in-grid](https://github.com/LeeHusung/Algorithm/tree/main/2943-maximize-area-of-square-hole-in-grid/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
