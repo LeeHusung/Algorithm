@@ -53,6 +53,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
 | [3577-count-the-number-of-computer-unlocking-permutations](https://github.com/LeeHusung/Algorithm/tree/main/3577-count-the-number-of-computer-unlocking-permutations/) | Medium |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
+| [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
 | [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -100,6 +101,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
+| [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
 ## Brainteaser
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -147,6 +149,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/LeeHusung/Algorithm/tree/main/2943-maximize-area-of-square-hole-in-grid/) | Medium |
+| [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -159,4 +162,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one](https://github.com/LeeHusung/Algorithm/tree/main/1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
 <!---LeetCode Topics End-->
