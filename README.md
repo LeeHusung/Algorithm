@@ -47,6 +47,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
+| [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [2672-number-of-adjacent-elements-with-the-same-color](https://github.com/LeeHusung/Algorithm/tree/main/2672-number-of-adjacent-elements-with-the-same-color/) | Medium |
@@ -85,6 +86,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 ## Counting
 | Problem Name | Difficulty |
@@ -183,4 +185,5 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
+| [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 <!---LeetCode Topics End-->
