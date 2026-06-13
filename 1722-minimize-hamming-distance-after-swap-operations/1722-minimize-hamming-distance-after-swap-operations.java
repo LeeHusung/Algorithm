@@ -34,14 +34,22 @@ class Solution {
                     }
                 }
             }
-          Map<Integer, Integer> map = new HashMap<>();
-            for (int x : list) map.merge(source[x], 1, Integer::sum);
-
+            Map<Integer, Integer> map = new HashMap<>();
+            for (int x : list) {
+                if (map.containsKey(source[x])) {
+                    map.put(source[x], map.get(source[x]) + 1);
+                } else {
+                    map.put(source[x], 1);
+                }
+            }
             int cnt = 0;
             for (int x : list) {
-                int c = map.getOrDefault(target[x], 0);
-                if (c > 0) map.put(target[x], c - 1);
-                else cnt++;
+                int c = map.containsKey(target[x]) ? map.get(target[x]) : 0;
+                if (c > 0) {
+                    map.put(target[x], c - 1);
+                } else {
+                    cnt++;
+                }
             }
 
             answer += cnt;
