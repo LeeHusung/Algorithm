@@ -47,6 +47,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/LeeHusung/Algorithm/tree/main/1722-minimize-hamming-distance-after-swap-operations/) | Medium |
 | [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
@@ -131,6 +132,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/LeeHusung/Algorithm/tree/main/1722-minimize-hamming-distance-after-swap-operations/) | Medium |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -140,6 +142,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/LeeHusung/Algorithm/tree/main/1722-minimize-hamming-distance-after-swap-operations/) | Medium |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
