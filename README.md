@@ -47,6 +47,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0875-koko-eating-bananas](https://github.com/LeeHusung/Algorithm/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1722-minimize-hamming-distance-after-swap-operations](https://github.com/LeeHusung/Algorithm/tree/main/1722-minimize-hamming-distance-after-swap-operations/) | Medium |
@@ -113,6 +114,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0875-koko-eating-bananas](https://github.com/LeeHusung/Algorithm/tree/main/0875-koko-eating-bananas/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
