@@ -52,6 +52,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1722-minimize-hamming-distance-after-swap-operations](https://github.com/LeeHusung/Algorithm/tree/main/1722-minimize-hamming-distance-after-swap-operations/) | Medium |
+| [1727-largest-submatrix-with-rearrangements](https://github.com/LeeHusung/Algorithm/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
@@ -96,6 +97,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1727-largest-submatrix-with-rearrangements](https://github.com/LeeHusung/Algorithm/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 ## Counting
@@ -167,6 +169,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
+| [1727-largest-submatrix-with-rearrangements](https://github.com/LeeHusung/Algorithm/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/LeeHusung/Algorithm/tree/main/2943-maximize-area-of-square-hole-in-grid/) | Medium |
 | [3433-count-mentions-per-user](https://github.com/LeeHusung/Algorithm/tree/main/3433-count-mentions-per-user/) | Medium |
@@ -202,5 +205,6 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
+| [1727-largest-submatrix-with-rearrangements](https://github.com/LeeHusung/Algorithm/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
 <!---LeetCode Topics End-->
