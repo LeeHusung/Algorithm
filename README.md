@@ -19,6 +19,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/LeeHusung/Algorithm/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/LeeHusung/Algorithm/tree/main/1461-check-if-a-string-contains-all-binary-codes-of-size-k/) | Medium |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
@@ -31,6 +32,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/LeeHusung/Algorithm/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/LeeHusung/Algorithm/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/LeeHusung/Algorithm/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
@@ -118,6 +120,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0875-koko-eating-bananas](https://github.com/LeeHusung/Algorithm/tree/main/0875-koko-eating-bananas/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/LeeHusung/Algorithm/tree/main/0981-time-based-key-value-store/) | Medium |
 | [2054-two-best-non-overlapping-events](https://github.com/LeeHusung/Algorithm/tree/main/2054-two-best-non-overlapping-events/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
 | [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
@@ -183,6 +186,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0981-time-based-key-value-store](https://github.com/LeeHusung/Algorithm/tree/main/0981-time-based-key-value-store/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
