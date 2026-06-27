@@ -8,6 +8,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0626-exchange-seats](https://github.com/LeeHusung/Algorithm/tree/master/0626-exchange-seats) |
 | [1163-project-employees-iii](https://github.com/LeeHusung/Algorithm/tree/master/1163-project-employees-iii) |
+| [1532-the-most-recent-three-orders](https://github.com/LeeHusung/Algorithm/tree/main/1532-the-most-recent-three-orders/) | Medium |
 | [1715-count-apples-and-oranges](https://github.com/LeeHusung/Algorithm/tree/main/1715-count-apples-and-oranges/) | Medium |
 | [1841-league-statistics](https://github.com/LeeHusung/Algorithm/tree/main/1841-league-statistics/) | Medium |
 | [1988-find-cutoff-score-for-each-school](https://github.com/LeeHusung/Algorithm/tree/main/1988-find-cutoff-score-for-each-school/) | Medium |
