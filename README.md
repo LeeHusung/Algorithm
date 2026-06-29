@@ -51,6 +51,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0031-next-permutation](https://github.com/LeeHusung/Algorithm/tree/main/0031-next-permutation/) | Medium |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0723-candy-crush](https://github.com/LeeHusung/Algorithm/tree/main/0723-candy-crush/) | Medium |
 | [0875-koko-eating-bananas](https://github.com/LeeHusung/Algorithm/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
@@ -87,6 +88,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0723-candy-crush](https://github.com/LeeHusung/Algorithm/tree/main/0723-candy-crush/) | Medium |
 | [1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one](https://github.com/LeeHusung/Algorithm/tree/main/1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Medium |
 | [3433-count-mentions-per-user](https://github.com/LeeHusung/Algorithm/tree/main/3433-count-mentions-per-user/) | Medium |
 | [3494-find-the-minimum-amount-of-time-to-brew-potions](https://github.com/LeeHusung/Algorithm/tree/main/3494-find-the-minimum-amount-of-time-to-brew-potions/) | Medium |
@@ -183,6 +185,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- | ------- |
 | [0031-next-permutation](https://github.com/LeeHusung/Algorithm/tree/main/0031-next-permutation/) | Medium |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0723-candy-crush](https://github.com/LeeHusung/Algorithm/tree/main/0723-candy-crush/) | Medium |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -209,6 +212,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0723-candy-crush](https://github.com/LeeHusung/Algorithm/tree/main/0723-candy-crush/) | Medium |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/LeeHusung/Algorithm/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1975-maximum-matrix-sum](https://github.com/LeeHusung/Algorithm/tree/main/1975-maximum-matrix-sum/) | Medium |
