@@ -20,6 +20,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LeeHusung/Algorithm/tree/main/0017-letter-combinations-of-a-phone-number/) | Medium |
 | [0244-shortest-word-distance-ii](https://github.com/LeeHusung/Algorithm/tree/main/0244-shortest-word-distance-ii/) | Medium |
+| [0904-fruit-into-baskets](https://github.com/LeeHusung/Algorithm/tree/master/0904-fruit-into-baskets) |
 | [0981-time-based-key-value-store](https://github.com/LeeHusung/Algorithm/tree/main/0981-time-based-key-value-store/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/LeeHusung/Algorithm/tree/main/1461-check-if-a-string-contains-all-binary-codes-of-size-k/) | Medium |
@@ -55,6 +56,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0399-evaluate-division](https://github.com/LeeHusung/Algorithm/tree/master/0399-evaluate-division) |
 | [0723-candy-crush](https://github.com/LeeHusung/Algorithm/tree/main/0723-candy-crush/) | Medium |
 | [0875-koko-eating-bananas](https://github.com/LeeHusung/Algorithm/tree/main/0875-koko-eating-bananas/) | Medium |
+| [0904-fruit-into-baskets](https://github.com/LeeHusung/Algorithm/tree/master/0904-fruit-into-baskets) |
 | [0994-rotting-oranges](https://github.com/LeeHusung/Algorithm/tree/main/0994-rotting-oranges/) | Medium |
 | [1152-analyze-user-website-visit-pattern](https://github.com/LeeHusung/Algorithm/tree/main/1152-analyze-user-website-visit-pattern/) | Medium |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/LeeHusung/Algorithm/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
@@ -217,6 +219,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Sliding Window
 |  |
 | ------- |
+| [0904-fruit-into-baskets](https://github.com/LeeHusung/Algorithm/tree/master/0904-fruit-into-baskets) |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/LeeHusung/Algorithm/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [3634-minimum-removals-to-balance-array](https://github.com/LeeHusung/Algorithm/tree/main/3634-minimum-removals-to-balance-array/) | Medium |
 | [3652-best-time-to-buy-and-sell-stock-using-strategy](https://github.com/LeeHusung/Algorithm/tree/main/3652-best-time-to-buy-and-sell-stock-using-strategy/) | Medium |
