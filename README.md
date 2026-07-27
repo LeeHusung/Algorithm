@@ -27,6 +27,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [1772-sort-features-by-popularity](https://github.com/LeeHusung/Algorithm/tree/main/1772-sort-features-by-popularity/) | Medium |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
+| [3043-find-the-length-of-the-longest-common-prefix](https://github.com/LeeHusung/Algorithm/tree/main/3043-find-the-length-of-the-longest-common-prefix/) | Medium |
 | [3607-power-grid-maintenance](https://github.com/LeeHusung/Algorithm/tree/main/3607-power-grid-maintenance/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 | [3719-longest-balanced-subarray-i](https://github.com/LeeHusung/Algorithm/tree/main/3719-longest-balanced-subarray-i/) | Medium |
@@ -44,6 +45,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/LeeHusung/Algorithm/tree/main/1461-check-if-a-string-contains-all-binary-codes-of-size-k/) | Medium |
 | [1653-minimum-deletions-to-make-string-balanced](https://github.com/LeeHusung/Algorithm/tree/main/1653-minimum-deletions-to-make-string-balanced/) | Medium |
 | [1772-sort-features-by-popularity](https://github.com/LeeHusung/Algorithm/tree/main/1772-sort-features-by-popularity/) | Medium |
+| [3043-find-the-length-of-the-longest-common-prefix](https://github.com/LeeHusung/Algorithm/tree/main/3043-find-the-length-of-the-longest-common-prefix/) | Medium |
 | [3714-longest-balanced-substring-ii](https://github.com/LeeHusung/Algorithm/tree/main/3714-longest-balanced-substring-ii/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -70,6 +72,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [2598-smallest-missing-non-negative-integer-after-operations](https://github.com/LeeHusung/Algorithm/tree/main/2598-smallest-missing-non-negative-integer-after-operations/) | Medium |
 | [2672-number-of-adjacent-elements-with-the-same-color](https://github.com/LeeHusung/Algorithm/tree/main/2672-number-of-adjacent-elements-with-the-same-color/) | Medium |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/LeeHusung/Algorithm/tree/main/2943-maximize-area-of-square-hole-in-grid/) | Medium |
+| [3043-find-the-length-of-the-longest-common-prefix](https://github.com/LeeHusung/Algorithm/tree/main/3043-find-the-length-of-the-longest-common-prefix/) | Medium |
 | [3147-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/LeeHusung/Algorithm/tree/main/3147-taking-maximum-energy-from-the-mystic-dungeon/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/LeeHusung/Algorithm/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3350-adjacent-increasing-subarrays-detection-ii](https://github.com/LeeHusung/Algorithm/tree/main/3350-adjacent-increasing-subarrays-detection-ii/) | Medium |
@@ -259,4 +262,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1136-parallel-courses](https://github.com/LeeHusung/Algorithm/tree/master/1136-parallel-courses) |
+## Trie
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3043-find-the-length-of-the-longest-common-prefix](https://github.com/LeeHusung/Algorithm/tree/main/3043-find-the-length-of-the-longest-common-prefix/) | Medium |
 <!---LeetCode Topics End-->
