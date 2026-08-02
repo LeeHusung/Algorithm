@@ -128,6 +128,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Enumeration
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1291-sequential-digits](https://github.com/LeeHusung/Algorithm/tree/main/1291-sequential-digits/) | Medium |
 | [2048-next-greater-numerically-balanced-number](https://github.com/LeeHusung/Algorithm/tree/main/2048-next-greater-numerically-balanced-number/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/LeeHusung/Algorithm/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 ## Stack
